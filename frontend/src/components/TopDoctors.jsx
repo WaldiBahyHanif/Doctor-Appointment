@@ -6,9 +6,10 @@ const TopDoctors = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
-      <h1 className="text-3xl font-medium">Top Doctors to Book</h1>
+      <h1 className="text-3xl font-medium">Dokter Pilihan untuk Anda</h1>
       <p className="text-sm text-center sm:w-1/3">
-        Simply browse through our extensive list of trusted doctors.
+        Daftar dokter berpengalaman yang siap memberikan pelayanan medis
+        terbaik.
       </p>
 
       {/* Grid Kartu Dokter */}
@@ -16,18 +17,18 @@ const TopDoctors = () => {
         {doctors.slice(0, 10).map((item, index) => (
           <div
             onClick={() => navigate(`/appointment/${item._id}`)}
-            className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
+            className="border border-teal-100 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500 shadow-sm hover:shadow-md"
             key={index}
           >
             <img
-              className="w-full bg-blue-50"
+              className="w-full bg-teal-50/50"
               src={item.image}
               alt={item.name}
             />
             <div className="p-4">
-              <div className="flex items-center gap-2 text-sm text-center text-green-500">
+              <div className="flex items-center gap-2 text-sm text-center text-green-600">
                 <p className="w-2 h-2 bg-green-500 rounded-full"></p>
-                <p>Available</p>
+                <p>Tersedia</p>
               </div>
               <p className="text-lg font-medium text-gray-900">{item.name}</p>
               <p className="text-sm text-gray-600">{item.speciality}</p>
@@ -42,9 +43,9 @@ const TopDoctors = () => {
           navigate("/doctors");
           scrollTo(0, 0);
         }}
-        className="px-12 py-3 mt-10 text-gray-600 rounded-full bg-blue-50"
+        className="px-12 py-3 mt-10 text-gray-700 transition-all rounded-full bg-teal-50 hover:bg-teal-100"
       >
-        more
+        Lihat Semua Dokter
       </button>
     </div>
   );

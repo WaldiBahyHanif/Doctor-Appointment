@@ -7,10 +7,9 @@ const SpecialityMenu = () => {
       className="flex flex-col items-center gap-4 py-16 text-gray-800"
       id="speciality"
     >
-      <h1 className="text-3xl font-medium">Find by Speciality</h1>
+      <h1 className="text-3xl font-medium">Pilih Berdasarkan Spesialisasi</h1>
       <p className="text-sm text-center sm:w-1/3">
-        Simply browse through our extensive list of trusted doctors, schedule
-        your appointment hassle-free.
+        Pilih bidang medis yang Anda butuhkan untuk menemukan dokter yang tepat.
       </p>
       <div className="flex w-full gap-4 pt-5 overflow-scroll sm:justify-center">
         {specialityData.map((item, index) => (
